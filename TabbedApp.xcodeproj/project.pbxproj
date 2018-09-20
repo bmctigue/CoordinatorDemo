@@ -90,43 +90,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A84872972153083700B9BCDF /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				A876F3E9214186EF00D5135D /* LaunchScreen.storyboard */,
-				A867816A2153FB2C009F5753 /* App.storyboard */,
-				A84872922153081200B9BCDF /* First.storyboard */,
-				A84872952153082300B9BCDF /* Second.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		A84872982153085600B9BCDF /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A876F3E0214186ED00D5135D /* FirstViewController.swift */,
-				A876F3E2214186ED00D5135D /* SecondViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		A86781672153FB09009F5753 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				A86781682153FB09009F5753 /* StoryboardFactory.swift */,
 			);
 			path = Factories;
-			sourceTree = "<group>";
-		};
-		A86781702153FF72009F5753 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				A867816C2153FB87009F5753 /* AppCoordinator.swift */,
-				A86781712153FFD1009F5753 /* TabbarCoordinator.swift */,
-				A8678173215400D5009F5753 /* FirstCoordinator.swift */,
-				A867817521540D38009F5753 /* SecondCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		A876F3D2214186ED00D5135D = {
@@ -152,9 +121,7 @@
 		A876F3DD214186ED00D5135D /* TabbedApp */ = {
 			isa = PBXGroup;
 			children = (
-				A86781702153FF72009F5753 /* Coordinators */,
-				A84872982153085600B9BCDF /* Controllers */,
-				A84872972153083700B9BCDF /* Storyboards */,
+				A894DA622154644A0034B8E7 /* Scenes */,
 				A86781672153FB09009F5753 /* Factories */,
 				A876F3DE214186ED00D5135D /* AppDelegate.swift */,
 				A876F3E7214186EF00D5135D /* Assets.xcassets */,
@@ -179,6 +146,55 @@
 				A876F402214186EF00D5135D /* Info.plist */,
 			);
 			path = TabbedAppUITests;
+			sourceTree = "<group>";
+		};
+		A894DA61215464450034B8E7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A876F3E9214186EF00D5135D /* LaunchScreen.storyboard */,
+				A867816A2153FB2C009F5753 /* App.storyboard */,
+				A867816C2153FB87009F5753 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A894DA622154644A0034B8E7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A894DA61215464450034B8E7 /* App */,
+				A894DA65215464690034B8E7 /* Tab */,
+				A894DA632154645A0034B8E7 /* First */,
+				A894DA64215464620034B8E7 /* Second */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A894DA632154645A0034B8E7 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				A84872922153081200B9BCDF /* First.storyboard */,
+				A8678173215400D5009F5753 /* FirstCoordinator.swift */,
+				A876F3E0214186ED00D5135D /* FirstViewController.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		A894DA64215464620034B8E7 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				A84872952153082300B9BCDF /* Second.storyboard */,
+				A867817521540D38009F5753 /* SecondCoordinator.swift */,
+				A876F3E2214186ED00D5135D /* SecondViewController.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		A894DA65215464690034B8E7 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A86781712153FFD1009F5753 /* TabbarCoordinator.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
