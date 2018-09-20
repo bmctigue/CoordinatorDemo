@@ -1,5 +1,5 @@
 //
-//  TabbarCoordinator.swift
+//  TabBarCoordinator.swift
 //  TabbedApp
 //
 //  Created by Bruce McTigue on 9/20/18.
