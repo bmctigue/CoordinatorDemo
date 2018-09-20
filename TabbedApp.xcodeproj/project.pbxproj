@@ -20,7 +20,6 @@
 		A876F3E3214186ED00D5135D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F3E2214186ED00D5135D /* SecondViewController.swift */; };
 		A876F3E8214186EF00D5135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A876F3E7214186EF00D5135D /* Assets.xcassets */; };
 		A876F3EB214186EF00D5135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A876F3E9214186EF00D5135D /* LaunchScreen.storyboard */; };
-		A876F3F6214186EF00D5135D /* TabbedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F3F5214186EF00D5135D /* TabbedAppTests.swift */; };
 		A876F401214186EF00D5135D /* TabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F400214186EF00D5135D /* TabbedAppUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,7 @@
 		A86781682153FB09009F5753 /* StoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
 		A867816A2153FB2C009F5753 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		A867816C2153FB87009F5753 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		A86781712153FFD1009F5753 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		A86781712153FFD1009F5753 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A8678173215400D5009F5753 /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
 		A867817521540D38009F5753 /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
 		A876F3DB214186ED00D5135D /* TabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,11 +57,11 @@
 		A876F3EA214186EF00D5135D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A876F3EC214186EF00D5135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A876F3F1214186EF00D5135D /* TabbedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabbedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A876F3F5214186EF00D5135D /* TabbedAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedAppTests.swift; sourceTree = "<group>"; };
 		A876F3F7214186EF00D5135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A876F3FC214186EF00D5135D /* TabbedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabbedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A876F400214186EF00D5135D /* TabbedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedAppUITests.swift; sourceTree = "<group>"; };
 		A876F402214186EF00D5135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A894DA662154661D0034B8E7 /* TabbedAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbedAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +132,8 @@
 		A876F3F4214186EF00D5135D /* TabbedAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A876F3F5214186EF00D5135D /* TabbedAppTests.swift */,
 				A876F3F7214186EF00D5135D /* Info.plist */,
+				A894DA662154661D0034B8E7 /* TabbedAppTests-Bridging-Header.h */,
 			);
 			path = TabbedAppTests;
 			sourceTree = "<group>";
@@ -192,7 +191,7 @@
 		A894DA65215464690034B8E7 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				A86781712153FFD1009F5753 /* TabbarCoordinator.swift */,
+				A86781712153FFD1009F5753 /* TabBarCoordinator.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -268,6 +267,7 @@
 					};
 					A876F3F0214186EF00D5135D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = A876F3DA214186ED00D5135D;
 					};
 					A876F3FB214186EF00D5135D = {
@@ -336,7 +336,7 @@
 				A876F3DF214186ED00D5135D /* AppDelegate.swift in Sources */,
 				A867816D2153FB87009F5753 /* AppCoordinator.swift in Sources */,
 				A876F3E1214186ED00D5135D /* FirstViewController.swift in Sources */,
-				A86781722153FFD1009F5753 /* TabbarCoordinator.swift in Sources */,
+				A86781722153FFD1009F5753 /* TabBarCoordinator.swift in Sources */,
 				A86781692153FB09009F5753 /* StoryboardFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +345,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A876F3F6214186EF00D5135D /* TabbedAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +546,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462PHCYTGY;
 				INFOPLIST_FILE = TabbedAppTests/Info.plist;
@@ -557,6 +557,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.TabbedAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TabbedAppTests/TabbedAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabbedApp.app/TabbedApp";
@@ -568,6 +570,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462PHCYTGY;
 				INFOPLIST_FILE = TabbedAppTests/Info.plist;
@@ -578,6 +581,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.TabbedAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TabbedAppTests/TabbedAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabbedApp.app/TabbedApp";

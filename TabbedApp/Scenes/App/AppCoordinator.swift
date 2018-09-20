@@ -18,14 +18,15 @@ protocol TabCoordinator: class {
 class AppCoordinator {
     
     private var window: UIWindow?
+    private var tabBarController: UITabBarController?
     
-    init(with window: UIWindow?) {
+    init(with window: UIWindow?, tabBarController: UITabBarController?) {
         self.window = window
+        self.tabBarController = tabBarController
     }
     
     func run() {
-        let storyboard = StoryboardFactory().create(name: "App")
-        if let tabBarController = storyboard.instantiateInitialViewController() as? UITabBarController {
+        if let tabBarController = tabBarController {
             let tabBarCoordinator = TabBarCoordinator(with: tabBarController)
             tabBarCoordinator.run()
             self.window?.rootViewController = tabBarController
