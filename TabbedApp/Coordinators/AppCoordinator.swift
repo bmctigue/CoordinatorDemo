@@ -11,7 +11,7 @@ import UIKit
 
 typealias CoordinatorBlock = ((UIViewController) -> Void)
 
-protocol Coordinator: class {
+protocol TabCoordinator: class {
     func run(completionHandler: CoordinatorBlock)
 }
 

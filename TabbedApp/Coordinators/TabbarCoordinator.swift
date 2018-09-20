@@ -25,17 +25,19 @@ class TabBarCoordinator {
         updateTabImages()
     }
     
-    private func addController(coordinator: Coordinator) {
+    private func addController(coordinator: TabCoordinator) {
         coordinator.run(completionHandler: { controller in
             controllers.append(controller)
         })
     }
     
     private func updateTabImages() {
-        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "first")?.withRenderingMode(.alwaysOriginal)
-        self.tabBarController?.tabBar.items?[0].selectedImage = UIImage(named: "first")?.withRenderingMode(.alwaysOriginal)
-        
-        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "second")?.withRenderingMode(.alwaysOriginal)
-        self.tabBarController?.tabBar.items?[1].selectedImage = UIImage(named: "second")?.withRenderingMode(.alwaysOriginal)
+        updateTabImage(tab: 0, imageName: "first")
+        updateTabImage(tab: 1, imageName: "second")
+    }
+    
+    private func updateTabImage(tab: Int, imageName: String) {
+        self.tabBarController?.tabBar.items?[tab].image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+        self.tabBarController?.tabBar.items?[tab].selectedImage = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
     }
 }
