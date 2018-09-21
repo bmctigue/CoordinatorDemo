@@ -9,13 +9,6 @@
 import Foundation
 import UIKit
 
-typealias TabCoordinatorBlock = ((UIViewController) -> Void)
-
-protocol TabCoordinator: class {
-    func getImageName() -> String
-    func run(completionHandler: TabCoordinatorBlock)
-}
-
 final class AppCoordinator {
     
     private var window: UIWindow?

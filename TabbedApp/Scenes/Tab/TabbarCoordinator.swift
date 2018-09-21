@@ -9,7 +9,14 @@
 import Foundation
 import UIKit
 
-class TabBarCoordinator {
+typealias TabCoordinatorBlock = ((UIViewController) -> Void)
+
+protocol TabCoordinator: class {
+    func getImageName() -> String
+    func run(completionHandler: TabCoordinatorBlock)
+}
+
+final class TabBarCoordinator {
     
     private let tabBarController: UITabBarController?
     private var controllers: [UIViewController] = []
@@ -28,7 +35,7 @@ class TabBarCoordinator {
         tabBarController?.setViewControllers(controllers, animated: false)
         
         for (index, coordinator) in coordinators.enumerated() {
-            updateTabImage(tab: index, imageName: coordinator.imageName)
+            updateTabImage(tab: index, imageName: coordinator.getImageName())
         }
     }
     
