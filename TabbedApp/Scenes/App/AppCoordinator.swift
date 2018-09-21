@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-typealias CoordinatorBlock = ((UIViewController) -> Void)
+typealias TabCoordinatorBlock = ((UIViewController) -> Void)
 
 protocol TabCoordinator: class {
-    func run(completionHandler: CoordinatorBlock)
+    var index: Int { get set }
+    var imageName: String { get set }
+    func run(completionHandler: TabCoordinatorBlock)
 }
 
 class AppCoordinator {

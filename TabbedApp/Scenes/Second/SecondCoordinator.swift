@@ -11,6 +11,9 @@ import UIKit
 
 class SecondCoordinator: TabCoordinator {
     
+    var index: Int = 1
+    var imageName: String = "second"
+    
     func run(completionHandler: TabCoordinatorBlock) {
         let storyboard = StoryboardFactory().create(name: "Second")
         if let controller = storyboard.instantiateInitialViewController() as? SecondViewController {

@@ -11,7 +11,10 @@ import UIKit
 
 class FirstCoordinator: TabCoordinator {
     
-    func run(completionHandler: CoordinatorBlock) {
+    var index: Int = 0
+    var imageName: String = "first"
+    
+    func run(completionHandler: TabCoordinatorBlock) {
         let storyboard = StoryboardFactory().create(name: "First")
         if let controller = storyboard.instantiateInitialViewController() as? FirstViewController {
             completionHandler(controller)
