@@ -13,27 +13,29 @@ class TabBarCoordinator {
     
     private let tabBarController: UITabBarController?
     private var controllers: [UIViewController] = []
+    private var coordinators: [TabCoordinator] = []
     
-    init(with tabBarController: UITabBarController) {
+    init(with tabBarController: UITabBarController, coordinators: [TabCoordinator]) {
         self.tabBarController = tabBarController
+        self.coordinators = coordinators
     }
     
     func run() {
-        addController(coordinator: FirstCoordinator())
-        addController(coordinator: SecondCoordinator())
+        for coordinator in coordinators {
+            addController(coordinator: coordinator)
+        }
+        
         tabBarController?.setViewControllers(controllers, animated: false)
-        updateTabImages()
+        
+        for (index, coordinator) in coordinators.enumerated() {
+            updateTabImage(tab: index, imageName: coordinator.imageName)
+        }
     }
     
     private func addController(coordinator: TabCoordinator) {
         coordinator.run(completionHandler: { controller in
             controllers.append(controller)
         })
-    }
-    
-    private func updateTabImages() {
-        updateTabImage(tab: 0, imageName: "first")
-        updateTabImage(tab: 1, imageName: "second")
     }
     
     private func updateTabImage(tab: Int, imageName: String) {

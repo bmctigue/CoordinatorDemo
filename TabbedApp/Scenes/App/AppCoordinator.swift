@@ -20,6 +20,7 @@ class AppCoordinator {
     
     private var window: UIWindow?
     private var tabBarController: UITabBarController?
+    private var coordinators: [TabCoordinator] = [FirstCoordinator(), SecondCoordinator()]
     
     init(with window: UIWindow?, tabBarController: UITabBarController?) {
         self.window = window
@@ -28,7 +29,7 @@ class AppCoordinator {
     
     func run() {
         if let tabBarController = tabBarController {
-            let tabBarCoordinator = TabBarCoordinator(with: tabBarController)
+            let tabBarCoordinator = TabBarCoordinator(with: tabBarController, coordinators: coordinators)
             tabBarCoordinator.run()
             self.window?.rootViewController = tabBarController
             self.window?.makeKeyAndVisible()
