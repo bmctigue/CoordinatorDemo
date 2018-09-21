@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-final class AppCoordinator {
+protocol BaseCoordinator: class {
+    func run()
+}
+
+final class AppCoordinator: BaseCoordinator {
     
     private var window: UIWindow?
     private var tabBarController: UITabBarController?
