@@ -12,7 +12,6 @@ import UIKit
 typealias TabCoordinatorBlock = ((UIViewController) -> Void)
 
 protocol TabCoordinator: class {
-    var index: Int { get set }
     var imageName: String { get set }
     func run(completionHandler: TabCoordinatorBlock)
 }

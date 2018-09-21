@@ -11,7 +11,6 @@ import UIKit
 
 class FirstCoordinator: TabCoordinator {
     
-    var index: Int = 0
     var imageName: String = "first"
     
     func run(completionHandler: TabCoordinatorBlock) {
