@@ -9,9 +9,17 @@
 import Foundation
 import UIKit
 
-class SecondCoordinator: TabCoordinator {
+final class SecondCoordinator: TabCoordinator {
     
-    var imageName: String = "second"
+    private var imageName: String
+    
+    init(with imageName: String) {
+        self.imageName = imageName
+    }
+    
+    func getImageName() -> String {
+        return imageName
+    }
     
     func run(completionHandler: TabCoordinatorBlock) {
         let storyboard = StoryboardFactory().create(name: "Second")

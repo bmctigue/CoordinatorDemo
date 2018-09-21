@@ -12,15 +12,15 @@ import UIKit
 typealias TabCoordinatorBlock = ((UIViewController) -> Void)
 
 protocol TabCoordinator: class {
-    var imageName: String { get set }
+    func getImageName() -> String
     func run(completionHandler: TabCoordinatorBlock)
 }
 
-class AppCoordinator {
+final class AppCoordinator {
     
     private var window: UIWindow?
     private var tabBarController: UITabBarController?
-    private var coordinators: [TabCoordinator] = [FirstCoordinator(), SecondCoordinator()]
+    private var coordinators: [TabCoordinator] = [FirstCoordinator(with: "first"), SecondCoordinator(with: "second")]
     
     init(with window: UIWindow?, tabBarController: UITabBarController?) {
         self.window = window

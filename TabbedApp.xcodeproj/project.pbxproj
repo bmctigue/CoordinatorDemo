@@ -12,7 +12,6 @@
 		A86781692153FB09009F5753 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86781682153FB09009F5753 /* StoryboardFactory.swift */; };
 		A867816B2153FB2C009F5753 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A867816A2153FB2C009F5753 /* App.storyboard */; };
 		A867816D2153FB87009F5753 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867816C2153FB87009F5753 /* AppCoordinator.swift */; };
-		A86781722153FFD1009F5753 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86781712153FFD1009F5753 /* TabbarCoordinator.swift */; };
 		A8678174215400D5009F5753 /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8678173215400D5009F5753 /* FirstCoordinator.swift */; };
 		A867817621540D38009F5753 /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867817521540D38009F5753 /* SecondCoordinator.swift */; };
 		A876F3DF214186ED00D5135D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F3DE214186ED00D5135D /* AppDelegate.swift */; };
@@ -21,6 +20,7 @@
 		A876F3E8214186EF00D5135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A876F3E7214186EF00D5135D /* Assets.xcassets */; };
 		A876F3EB214186EF00D5135D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A876F3E9214186EF00D5135D /* LaunchScreen.storyboard */; };
 		A876F401214186EF00D5135D /* TabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F400214186EF00D5135D /* TabbedAppUITests.swift */; };
+		A8D889B821554A1800D0AE7D /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D889B721554A1800D0AE7D /* TabBarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		A86781682153FB09009F5753 /* StoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
 		A867816A2153FB2C009F5753 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		A867816C2153FB87009F5753 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		A86781712153FFD1009F5753 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A8678173215400D5009F5753 /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
 		A867817521540D38009F5753 /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
 		A876F3DB214186ED00D5135D /* TabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +61,7 @@
 		A876F400214186EF00D5135D /* TabbedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedAppUITests.swift; sourceTree = "<group>"; };
 		A876F402214186EF00D5135D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A894DA662154661D0034B8E7 /* TabbedAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabbedAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8D889B721554A1800D0AE7D /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 		A894DA65215464690034B8E7 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				A86781712153FFD1009F5753 /* TabBarCoordinator.swift */,
+				A8D889B721554A1800D0AE7D /* TabBarCoordinator.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -332,11 +332,11 @@
 			files = (
 				A8678174215400D5009F5753 /* FirstCoordinator.swift in Sources */,
 				A876F3E3214186ED00D5135D /* SecondViewController.swift in Sources */,
+				A8D889B821554A1800D0AE7D /* TabBarCoordinator.swift in Sources */,
 				A867817621540D38009F5753 /* SecondCoordinator.swift in Sources */,
 				A876F3DF214186ED00D5135D /* AppDelegate.swift in Sources */,
 				A867816D2153FB87009F5753 /* AppCoordinator.swift in Sources */,
 				A876F3E1214186ED00D5135D /* FirstViewController.swift in Sources */,
-				A86781722153FFD1009F5753 /* TabBarCoordinator.swift in Sources */,
 				A86781692153FB09009F5753 /* StoryboardFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
