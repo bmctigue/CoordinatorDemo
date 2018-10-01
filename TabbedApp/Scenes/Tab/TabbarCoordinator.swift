@@ -16,7 +16,7 @@ protocol TabCoordinator: class {
     func run(completionHandler: TabCoordinatorBlock)
 }
 
-final class TabBarCoordinator {
+final class TabBarCoordinator: BaseCoordinator {
     
     private let tabBarController: UITabBarController?
     private var controllers: [UIViewController] = []
