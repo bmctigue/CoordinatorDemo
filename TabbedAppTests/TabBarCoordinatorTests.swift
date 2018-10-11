@@ -21,8 +21,7 @@ class TabBarCoordinatorTests: XCTestCase {
         let tabBarCoordinator = TabBarCoordinator(with: tabBarController, coordinators: coordinators)
         tabBarCoordinator.run()
         if let controllers = tabBarController.viewControllers {
-            for (index,_) in
-                (controllers.enumerated()) {
+            for (index,_) in controllers.enumerated() {
                 tabBarController.selectedIndex = index
             }
         }

@@ -15,9 +15,7 @@ class SecondTests: XCTestCase {
     
     func testCoordinator() {
         let imageName = "second"
-        
         let coordinator = SecondCoordinator(with: imageName)
-        
         let expectation = self.expectation(description: "testCoordinator")
         
         coordinator.run(completionHandler: { controller in
