@@ -14,12 +14,12 @@ class TabBarCoordinatorTests: XCTestCase {
     func testCoordinator() {
         let firstImageName = "first"
         let secondImageName = "second"
-        let tabBarController = UITabBarController()
         let firstCoordinator = FirstCoordinator(with: firstImageName)
         let secondCoordinator = SecondCoordinator(with: secondImageName)
-        let coordinators: [Coordinator] =  [firstCoordinator, secondCoordinator]
-        let tabBarCoordinator = TabBarCoordinator(with: tabBarController, coordinators: coordinators)
+        let coordinators: [TabCoordinator] =  [firstCoordinator, secondCoordinator]
+        let tabBarCoordinator = TabBarCoordinator(with: coordinators)
         tabBarCoordinator.run()
+        let tabBarController = tabBarCoordinator.getTabBar()
         if let controllers = tabBarController.viewControllers {
             for (index,_) in controllers.enumerated() {
                 tabBarController.selectedIndex = index

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class FirstCoordinator: Coordinator {
+final class FirstCoordinator: TabCoordinator {
     
     private var imageName: String
     

@@ -24,6 +24,7 @@
 		A8CF1F87219A276C00F9EFC6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF1F82219A276C00F9EFC6 /* AppCoordinator.swift */; };
 		A8CF1F88219A276C00F9EFC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CF1F83219A276C00F9EFC6 /* LaunchScreen.storyboard */; };
 		A8CF1F89219A276C00F9EFC6 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF1F86219A276C00F9EFC6 /* TabBarCoordinator.swift */; };
+		A8CF1F8B219A30E600F9EFC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF1F8A219A30E600F9EFC6 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		A8CF1F82219A276C00F9EFC6 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A8CF1F84219A276C00F9EFC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8CF1F86219A276C00F9EFC6 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		A8CF1F8A219A30E600F9EFC6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				A8CF1F83219A276C00F9EFC6 /* LaunchScreen.storyboard */,
 				A8CF1F82219A276C00F9EFC6 /* AppCoordinator.swift */,
+				A8CF1F8A219A30E600F9EFC6 /* Coordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				A876F3E1214186ED00D5135D /* FirstViewController.swift in Sources */,
 				A86781692153FB09009F5753 /* StoryboardFactory.swift in Sources */,
 				A8CF1F87219A276C00F9EFC6 /* AppCoordinator.swift in Sources */,
+				A8CF1F8B219A30E600F9EFC6 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

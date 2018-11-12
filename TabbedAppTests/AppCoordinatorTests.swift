@@ -15,8 +15,9 @@ class AppCoordinatorTests: XCTestCase {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let coordinator = AppCoordinator(with: window)
         coordinator.run()
-        let tabBar = coordinator.getTabBar()
-        let coordinators = coordinator.getCoordinators()
+        let tabBarCoordinator = coordinator.getTabBarCoordinator()
+        let tabBar = tabBarCoordinator.getTabBar()
+        let coordinators = tabBarCoordinator.getCoordinators()
         XCTAssert(tabBar.viewControllers!.count == coordinators.count)
     }
 }
