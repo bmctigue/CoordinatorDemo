@@ -12,11 +12,11 @@ import XCTest
 class AppCoordinatorTests: XCTestCase {
 
     func testAppCoordinator() {
-        let tabBarController = UITabBarController()
-        let coordinators: [TabCoordinator] = [FirstCoordinator(with: "first"), SecondCoordinator(with: "second")]
-        let coordinator = AppCoordinator(with: nil, tabBarController: tabBarController, coordinators: coordinators)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let coordinator = AppCoordinator(with: window)
         coordinator.run()
-        XCTAssert(tabBarController.viewControllers!.count == coordinators.count)
-        
+        let tabBar = coordinator.getTabBar()
+        let coordinators = coordinator.getCoordinators()
+        XCTAssert(tabBar.viewControllers!.count == coordinators.count)
     }
 }
