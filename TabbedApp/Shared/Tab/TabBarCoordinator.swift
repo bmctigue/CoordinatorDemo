@@ -9,21 +9,13 @@
 import Foundation
 import UIKit
 
-typealias TabCoordinatorBlock = ((UIViewController) -> Void)
-
-protocol TabCoordinator: class {
-    func getImageName() -> String
-    func run(completionHandler: TabCoordinatorBlock)
-}
-
 final class TabBarCoordinator: BaseCoordinator {
     
-    private let tabBarController: UITabBarController?
+    private let tabBarController = UITabBarController()
+    private let coordinators: [TabCoordinator]
     private var controllers: [UIViewController] = []
-    private var coordinators: [TabCoordinator] = []
     
-    init(with tabBarController: UITabBarController, coordinators: [TabCoordinator]) {
-        self.tabBarController = tabBarController
+    init(with coordinators: [TabCoordinator]) {
         self.coordinators = coordinators
     }
     
@@ -32,7 +24,7 @@ final class TabBarCoordinator: BaseCoordinator {
             addController(coordinator: coordinator)
         }
         
-        tabBarController?.setViewControllers(controllers, animated: false)
+        tabBarController.setViewControllers(controllers, animated: false)
         
         for (index, coordinator) in coordinators.enumerated() {
             updateTabImage(tab: index, imageName: coordinator.getImageName())
@@ -46,7 +38,13 @@ final class TabBarCoordinator: BaseCoordinator {
     }
     
     private func updateTabImage(tab: Int, imageName: String) {
-        self.tabBarController?.tabBar.items?[tab].image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
-        self.tabBarController?.tabBar.items?[tab].selectedImage = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+        self.tabBarController.tabBar.items?[tab].image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+        self.tabBarController.tabBar.items?[tab].selectedImage = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+    }
+}
+
+extension TabBarCoordinator {
+    func getTabBar() -> UITabBarController {
+        return tabBarController
     }
 }

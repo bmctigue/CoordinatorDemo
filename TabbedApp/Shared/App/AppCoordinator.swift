@@ -9,34 +9,20 @@
 import Foundation
 import UIKit
 
-protocol BaseCoordinator: class {
-    func run()
-}
-
 final class AppCoordinator: BaseCoordinator {
     
     private var window: UIWindow?
-    private lazy var tabBarController: UITabBarController = UITabBarController()
+    private (set) var tabBarCoordinator: TabBarCoordinator!
     private lazy var coordinators: [TabCoordinator] = [FirstCoordinator(with: "first"), SecondCoordinator(with: "second")]
     
     init(with window: UIWindow?) {
         self.window = window
+        self.tabBarCoordinator = TabBarCoordinator(with: coordinators)
     }
     
     func run() {
-        let tabBarCoordinator = TabBarCoordinator(with: tabBarController, coordinators: coordinators)
         tabBarCoordinator.run()
-        self.window?.rootViewController = tabBarController
+        self.window?.rootViewController = tabBarCoordinator.getTabBar()
         self.window?.makeKeyAndVisible()
-    }
-}
-
-extension AppCoordinator {
-    func getTabBar() -> UITabBarController {
-        return tabBarController
-    }
-    
-    func getCoordinators() -> [TabCoordinator] {
-        return coordinators
     }
 }
