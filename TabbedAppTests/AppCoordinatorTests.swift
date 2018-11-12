@@ -21,3 +21,9 @@ class AppCoordinatorTests: XCTestCase {
         XCTAssert(tabBar.viewControllers!.count == coordinators.count)
     }
 }
+
+extension AppCoordinator {
+    func getTabBarCoordinator() -> TabBarCoordinator {
+        return tabBarCoordinator
+    }
+}

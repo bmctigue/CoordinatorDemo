@@ -29,3 +29,9 @@ class TabBarCoordinatorTests: XCTestCase {
         XCTAssert(tabBarController.tabBar.items!.count == coordinators.count)
     }
 }
+
+extension TabBarCoordinator {
+    func getCoordinators() -> [TabCoordinator] {
+        return coordinators
+    }
+}
