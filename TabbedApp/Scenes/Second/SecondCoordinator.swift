@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class SecondCoordinator: TabCoordinator {
+final class SecondCoordinator: Coordinator {
     
     private var imageName: String
     
@@ -21,7 +21,7 @@ final class SecondCoordinator: TabCoordinator {
         return imageName
     }
     
-    func run(completionHandler: TabCoordinatorBlock) {
+    func run(completionHandler: CoordinatorBlock) {
         let storyboard = StoryboardFactory().create(name: "Second")
         if let controller = storyboard.instantiateInitialViewController() as? SecondViewController {
             completionHandler(controller)

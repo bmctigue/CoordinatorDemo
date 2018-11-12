@@ -199,8 +199,8 @@
 		A8CF1F81219A276C00F9EFC6 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF1F82219A276C00F9EFC6 /* AppCoordinator.swift */,
 				A8CF1F83219A276C00F9EFC6 /* LaunchScreen.storyboard */,
+				A8CF1F82219A276C00F9EFC6 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";

@@ -17,7 +17,7 @@ class TabBarCoordinatorTests: XCTestCase {
         let tabBarController = UITabBarController()
         let firstCoordinator = FirstCoordinator(with: firstImageName)
         let secondCoordinator = SecondCoordinator(with: secondImageName)
-        let coordinators: [TabCoordinator] =  [firstCoordinator, secondCoordinator]
+        let coordinators: [Coordinator] =  [firstCoordinator, secondCoordinator]
         let tabBarCoordinator = TabBarCoordinator(with: tabBarController, coordinators: coordinators)
         tabBarCoordinator.run()
         if let controllers = tabBarController.viewControllers {
